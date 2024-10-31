@@ -1,36 +1,36 @@
-#Un viajero desea saber cuánto tiempo tomó un viaje que realizó. Él tiene la duración en minutos de cada uno de los tramos del viaje.
+#Escriba un programa que pida al usuario ingresar la altura y el ancho de un rectángulo y lo dibuje utilizando asteriscos:
 
-#Desarrolle un programa que permita ingresar los tiempos de viaje de los tramos y entregue como resultado el tiempo total de viaje en formato horas:minutos.
+#Altura: 3
+#Ancho: 5
 
-#El programa deja de pedir tiempos de viaje cuando se ingresa un 0.
+#*****
+#*****
+#*****
+#Escriba un programa que dibuje el triángulo del tamaño indicado por el usuario de acuerdo al ejemplo:
 
-#Duracion tramo: 15
-#Duracion tramo: 30
-#Duracion tramo: 87
-#Duracion tramo: 0
-#Tiempo total de viaje: 2:12 horas
-#Duracion tramo: 51
-#Duracion tramo: 17
-#Duracion tramo: 0
-#Tiempo total de viaje: 1:08 horas
+#Altura: 5
 
-def calcular_tiempo_total():
+#*
+#**
+#***
+#****
+#*****
+#Escriba un programa que dibuje el hexágono del tamaño indicado por el usuario de acuerdo al ejemplo:
+
+#Lado: 4
+
+#   ****
+#  ******
+# ********
+#**********
+# ********
+#  ******
+#   ****
+
+altura = int(input("Altura: "))
+
+ancho = int(input("Ancho: "))
+
+for _ in range(altura):
     
-    total_minutos = 0
-
-    while True:
-   
-        tramo = int(input("Duración tramo: "))
-        
-        if tramo == 0:
-            break
-        
-        total_minutos += tramo
-
-    horas = total_minutos // 60
-
-    minutos = total_minutos % 60
-
-    print(f"Tiempo total de viaje: {horas}:{minutos:02d} horas")
-
-calcular_tiempo_total()
+    print('*' * ancho)
