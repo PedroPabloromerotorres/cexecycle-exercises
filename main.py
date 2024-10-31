@@ -1,36 +1,24 @@
-#Escriba un programa que pida al usuario ingresar la altura y el ancho de un rectángulo y lo dibuje utilizando asteriscos:
+#esarolle un programa para estimar el valor de π usando la siguiente suma infinita:
 
-#Altura: 3
-#Ancho: 5
+#π=4(1−13+15−17+…)
+#La entrada del programa debe ser un número entero n
+# que indique cuántos términos de la suma se utilizará.
 
-#*****
-#*****
-#*****
-#Escriba un programa que dibuje el triángulo del tamaño indicado por el usuario de acuerdo al ejemplo:
+#n: 3
+#3.466666666666667
+#n: 1000
+#3.140592653839794
 
-#Altura: 5
+n = int(input("n: "))
 
-#*
-#**
-#***
-#****
-#*****
-#Escriba un programa que dibuje el hexágono del tamaño indicado por el usuario de acuerdo al ejemplo:
+suma = 0
 
-#Lado: 4
-
-#   ****
-#  ******
-# ********
-#**********
-# ********
-#  ******
-#   ****
-
-altura = int(input("Altura: "))
-
-ancho = int(input("Ancho: "))
-
-for _ in range(altura):
+for k in range(n):
     
-    print('*' * ancho)
+    termino = ((-1) ** k) / (2 * k + 1)
+
+    suma += termino
+
+pi_estimado = 4 * suma
+
+print(pi_estimado)
